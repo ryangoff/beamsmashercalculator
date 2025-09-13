@@ -1,0 +1,133 @@
+<SelectImageButton@ToggleButtonBehavior+Image>:
+    allow_no_selection: True
+    allow_stretch: True
+    keep_ratio: True
+    size_hint_y: None
+    height: dp(90)
+    on_state: app.on_select(self, row=self.group) if hasattr(app, "on_select") else None
+    canvas.after:
+        Color:
+            rgba: (0, 0.6, 1, 1) if self.state == "down" else (0, 0, 0, 0)
+        Line:
+            width: dp(3)
+            rectangle: (self.x, self.y, self.width, self.height)
+
+BoxLayout:
+    orientation: "vertical"
+    spacing: dp(10)
+    padding: dp(10)
+
+    BoxLayout:
+        orientation: "vertical"
+        size_hint_y: 0.18
+        Label:
+            text: "Beamsmasher Calculator"
+            font_size: "24sp"
+            bold: True
+        Label:
+            id: output_label
+            text: "-- -- --"
+            font_size: "50sp"
+            bold: True
+            color: 1, 0, 0, 1
+
+
+
+    BoxLayout:
+        orientation: "vertical"
+        size_hint_y: 0.27
+        Label:
+            text: "X"
+            font_size: "18sp"
+            size_hint_y: None
+            height: dp(28)
+        GridLayout:
+            cols: 6
+            spacing: dp(6)
+            row_default_height: dp(90)
+            row_force_default: True
+
+            SelectImageButton:
+                group: "row_x"
+                source: "assets/1.jpg"
+            SelectImageButton:
+                group: "row_x"
+                source: "assets/2.jpg"
+            SelectImageButton:
+                group: "row_x"
+                source: "assets/3.jpg"
+            SelectImageButton:
+                group: "row_x"
+                source: "assets/4.jpg"
+            SelectImageButton:
+                group: "row_x"
+                source: "assets/5.jpg"
+            SelectImageButton:
+                group: "row_x"
+                source: "assets/6.jpg"
+
+    BoxLayout:
+        orientation: "vertical"
+        size_hint_y: 0.27
+        Label:
+            text: "Y"
+            font_size: "18sp"
+            size_hint_y: None
+            height: dp(28)
+        GridLayout:
+            cols: 6
+            spacing: dp(6)
+            row_default_height: dp(90)
+            row_force_default: True
+
+            SelectImageButton:
+                group: "row_y"
+                source: "assets/1.jpg"
+            SelectImageButton:
+                group: "row_y"
+                source: "assets/2.jpg"
+            SelectImageButton:
+                group: "row_y"
+                source: "assets/3.jpg"
+            SelectImageButton:
+                group: "row_y"
+                source: "assets/4.jpg"
+            SelectImageButton:
+                group: "row_y"
+                source: "assets/5.jpg"
+            SelectImageButton:
+                group: "row_y"
+                source: "assets/6.jpg"
+
+    BoxLayout:
+        orientation: "vertical"
+        size_hint_y: 0.27
+        Label:
+            text: "Z"
+            font_size: "18sp"
+            size_hint_y: None
+            height: dp(28)
+        GridLayout:
+            cols: 6
+            spacing: dp(6)
+            row_default_height: dp(90)
+            row_force_default: True
+
+            SelectImageButton:
+                group: "row_z"
+                source: "assets/1.jpg"
+            SelectImageButton:
+                group: "row_z"
+                source: "assets/2.jpg"
+            SelectImageButton:
+                group: "row_z"
+                source: "assets/3.jpg"
+            SelectImageButton:
+                group: "row_z"
+                source: "assets/4.jpg"
+            SelectImageButton:
+                group: "row_z"
+                source: "assets/5.jpg"
+            SelectImageButton:
+                group: "row_z"
+                source: "assets/6.jpg"
