@@ -1,5 +1,5 @@
 import unittest
-import main as appmod
+import beamsmasher as appmod
 
 class FakeLabel:
     def __init__(self):
